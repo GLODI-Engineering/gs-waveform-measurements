@@ -1,0 +1,15 @@
+[package]
+name = "gs-waveform-measurements"
+version = "0.1.0"
+description = "Post-simulation waveform measurements (max/min/rms/integral, threshold crossings, TRIG-TARG, bounded-harmonic Fourier analysis, error norms) on non-uniform (t, v) time series, in the style of ngspice's .measure and Xyce's .MEASURE, computed exactly on the real samples rather than by resampling to a uniform grid."
+edition = "2021"
+license = "AGPL-3.0-or-later"
+publish = true
+repository = "https://github.com/Elvis-codeur/gs-waveform-measurements"
+homepage = "https://github.com/Elvis-codeur/gs-waveform-measurements"
+documentation = "https://docs.rs/gs-waveform-measurements"
+readme = "README.md"
+keywords = ["measurement", "waveform", "spice", "transient", "fourier"]
+categories = ["algorithms", "science"]
+
+[dependencies]
