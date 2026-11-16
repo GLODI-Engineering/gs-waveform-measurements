@@ -266,17 +266,17 @@ mod tests {
         ];
         let result = four(&samples, &Window::FULL, 1.0, 4).unwrap();
 
-        for n in 1..=3usize {
+        for (n, harmonic) in result.harmonics.iter().enumerate().take(4).skip(1) {
             let ground_truth = quadrature_coefficient(n, 2_000_000);
             let expected_mag = 2.0 * ground_truth.abs();
-            let got_mag = result.harmonics[n].magnitude;
+            let got_mag = harmonic.magnitude;
             assert!(
                 (got_mag - expected_mag).abs() < 1e-4,
                 "n={n}: got {got_mag}, expected {expected_mag}"
             );
             if expected_mag > 1e-6 {
                 let expected_phase = ground_truth.im.atan2(ground_truth.re).to_degrees();
-                let got_phase = result.harmonics[n].phase_degrees;
+                let got_phase = harmonic.phase_degrees;
                 assert!(
                     (got_phase - expected_phase).abs() < 0.1,
                     "n={n}: got phase {got_phase}, expected {expected_phase}"
