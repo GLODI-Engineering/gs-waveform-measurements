@@ -6,7 +6,6 @@ edition = "2021"
 license = "AGPL-3.0-or-later"
 publish = true
 repository = "https://github.com/GLODI-Engineering/gs-waveform-measurements"
-homepage = "https://github.com/GLODI-Engineering/gs-waveform-measurements"
 documentation = "https://docs.rs/gs-waveform-measurements"
 readme = "README.md"
 keywords = ["measurement", "waveform", "spice", "transient", "fourier"]
