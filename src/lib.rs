@@ -25,11 +25,11 @@
 //! # Design constraint: no circuit knowledge
 //!
 //! This crate takes only [`Sample`] slices as input and returns plain numeric results. It has
-//! **no dependency on this workspace's own circuit or block-diagram types** (`general-mna`-style
-//! solvers, `dae-runtime`, `continuous-blocks`, or anything else in this repository) — the same
-//! isolation this repository's own `lcp-solver` crate is built and trusted under before any
-//! circuit-facing code depends on it. It is meant to be just as usable from a project with no
-//! connection to this simulator at all.
+//! **no dependency on any circuit or block-diagram type** — not on `general-mna`, `dae-runtime`,
+//! `continuous-blocks` or anything else in the `general-simulator` workspace it was extracted
+//! from — the same isolation that workspace's `lcp-solver` crate is built and trusted under
+//! before any circuit-facing code depends on it. It is meant to be just as usable from a project
+//! with no connection to that simulator at all.
 //!
 //! **What this crate deliberately does *not* do** (see this repository's journal for the full
 //! rationale): it does not read a `.measure`/`.MEASURE` netlist statement, does not know about a
